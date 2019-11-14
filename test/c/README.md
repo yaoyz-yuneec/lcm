@@ -11,7 +11,9 @@ Under the lcm root dir:
 ##start the test program
 
 Under the lcm/test/c dir:
+
 In one console:
     ./test-c-server
+    
 In another console:
     ./test-c-multi-thread
