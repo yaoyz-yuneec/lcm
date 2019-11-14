@@ -1,0 +1,590 @@
+Running main() from gtest_main.cc
+[==========] Running 2 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 2 tests from LCM_C
+[ RUN      ] LCM_C.CreateLCM
+[       OK ] LCM_C.CreateLCM (0 ms)
+[ RUN      ] LCM_C.MultiThreadLCM
+p->fn...
+p->fn...
+p->fn...
+p->fn...
+p->fn...
+p->fn...
+p->fn...
+p->fn...
+[send]msg id: 1 lcm_publish 0 iter
+[send]msg id: 0 lcm_publish 0 iter
+[send]msg id: 3 lcm_publish 0 iter
+[send]msg id: 4 lcm_publish 0 iter
+[receive] msg id cur: 1 rep: 1 --success
+[receive] msg id cur: 0 rep: 1 --mismath ID
+[receive] msg id cur: 3 rep: 1 --mismath ID
+[receive] msg id cur: 1 rep: 0 --mismath ID
+[receive] msg id cur: 0 rep: 0 --success
+[receive] msg id cur: 3 rep: 0 --mismath ID
+[send]msg id: 2 lcm_publish 0 iter
+[receive] msg id cur: 1 rep: 3 --mismath ID
+[receive] msg id cur: 0 rep: 3 --mismath ID
+[receive] msg id cur: 3 rep: 3 --success
+[send]msg id: 0 lcm_publish 1 iter
+[send]msg id: 6 lcm_publish 0 iter
+[send]msg id: 3 lcm_publish 1 iter
+[send]msg id: 5 lcm_publish 0 iter
+[send]msg id: 2 lcm_publish 1 iter
+[receive] msg id cur: 1 rep: 4 --mismath ID
+[receive] msg id cur: 0 rep: 4 --mismath ID
+[receive] msg id cur: 3 rep: 4 --mismath ID
+[receive] msg id cur: 4 rep: 4 --success
+[receive] msg id cur: 5 rep: 4 --mismath ID
+[receive] msg id cur: 6 rep: 4 --mismath ID
+[receive] msg id cur: 2 rep: 4 --mismath ID
+[receive] msg id cur: 1 rep: 2 --mismath ID
+[receive] msg id cur: 0 rep: 2 --mismath ID
+[receive] msg id cur: 3 rep: 2 --mismath ID
+[receive] msg id cur: 4 rep: 2 --mismath ID
+[receive] msg id cur: 5 rep: 2 --mismath ID
+[receive] msg id cur: 6 rep: 2 --mismath ID
+[receive] msg id cur: 2 rep: 2 --success
+[send]msg id: 3 lcm_publish 2 iter
+[receive] msg id cur: 7 rep: 2 --mismath ID
+[send]msg id: 1 lcm_publish 1 iter
+[receive] msg id cur: 1 rep: 0 --mismath ID
+[receive] msg id cur: 0 rep: 0 --success
+[receive] msg id cur: 3 rep: 0 --mismath ID
+[receive] msg id cur: 4 rep: 0 --mismath ID
+[receive] msg id cur: 5 rep: 0 --mismath ID
+[receive] msg id cur: 6 rep: 0 --mismath ID
+[receive] msg id cur: 2 rep: 0 --mismath ID
+[receive] msg id cur: 7 rep: 0 --mismath ID
+[send]msg id: 1 lcm_publish 2 iter
+[receive] msg id cur: 1 rep: 6 --mismath ID
+[receive] msg id cur: 0 rep: 6 --mismath ID
+[receive] msg id cur: 3 rep: 6 --mismath ID
+[receive] msg id cur: 4 rep: 6 --mismath ID
+[receive] msg id cur: 5 rep: 6 --mismath ID
+[receive] msg id cur: 6 rep: 6 --success
+[receive] msg id cur: 2 rep: 6 --mismath ID
+[receive] msg id cur: 7 rep: 6 --mismath ID
+[send]msg id: 0 lcm_publish 2 iter
+[receive] msg id cur: 1 rep: 3 --mismath ID
+[receive] msg id cur: 0 rep: 3 --mismath ID
+[receive] msg id cur: 3 rep: 3 --success
+[receive] msg id cur: 4 rep: 3 --mismath ID
+[receive] msg id cur: 5 rep: 3 --mismath ID
+[receive] msg id cur: 6 rep: 3 --mismath ID
+[receive] msg id cur: 2 rep: 3 --mismath ID
+[receive] msg id cur: 7 rep: 3 --mismath ID
+[send]msg id: 0 lcm_publish 3 iter
+[receive] msg id cur: 1 rep: 5 --mismath ID
+[receive] msg id cur: 0 rep: 5 --mismath ID
+[receive] msg id cur: 3 rep: 5 --mismath ID
+[receive] msg id cur: 4 rep: 5 --mismath ID
+[receive] msg id cur: 5 rep: 5 --success
+[receive] msg id cur: 6 rep: 5 --mismath ID
+[receive] msg id cur: 2 rep: 5 --mismath ID
+[receive] msg id cur: 7 rep: 5 --mismath ID
+[send]msg id: 0 lcm_publish 4 iter
+[receive] msg id cur: 1 rep: 2 --mismath ID
+[receive] msg id cur: 0 rep: 2 --mismath ID
+[receive] msg id cur: 3 rep: 2 --mismath ID
+[receive] msg id cur: 4 rep: 2 --mismath ID
+[receive] msg id cur: 5 rep: 2 --mismath ID
+[receive] msg id cur: 6 rep: 2 --mismath ID
+[receive] msg id cur: 2 rep: 2 --success
+[receive] msg id cur: 7 rep: 2 --mismath ID
+[send]msg id: 0 lcm_publish 5 iter
+[receive] msg id cur: 1 rep: 3 --mismath ID
+[receive] msg id cur: 0 rep: 3 --mismath ID
+[receive] msg id cur: 3 rep: 3 --success
+[receive] msg id cur: 4 rep: 3 --mismath ID
+[receive] msg id cur: 5 rep: 3 --mismath ID
+[receive] msg id cur: 6 rep: 3 --mismath ID
+[receive] msg id cur: 2 rep: 3 --mismath ID
+[receive] msg id cur: 7 rep: 3 --mismath ID
+[send]msg id: 0 lcm_publish 6 iter
+[receive] msg id cur: 1 rep: 7 --mismath ID
+[receive] msg id cur: 0 rep: 7 --mismath ID
+[receive] msg id cur: 3 rep: 7 --mismath ID
+[receive] msg id cur: 4 rep: 7 --mismath ID
+[receive] msg id cur: 5 rep: 7 --mismath ID
+[receive] msg id cur: 6 rep: 7 --mismath ID
+[receive] msg id cur: 2 rep: 7 --mismath ID
+[send]msg id: 0 lcm_publish 7 iter
+[send]msg id: 7 lcm_publish 0 iter
+[receive] msg id cur: 1 rep: 1 --success
+[receive] msg id cur: 0 rep: 1 --mismath ID
+[receive] msg id cur: 3 rep: 1 --mismath ID
+[receive] msg id cur: 4 rep: 1 --mismath ID
+[receive] msg id cur: 5 rep: 1 --mismath ID
+[receive] msg id cur: 6 rep: 1 --mismath ID
+[receive] msg id cur: 2 rep: 1 --mismath ID
+[receive] msg id cur: 7 rep: 1 --mismath ID
+[send]msg id: 2 lcm_publish 2 iter
+[receive] msg id cur: 1 rep: 1 --success
+[receive] msg id cur: 0 rep: 1 --mismath ID
+[receive] msg id cur: 3 rep: 1 --mismath ID
+[receive] msg id cur: 4 rep: 1 --mismath ID
+[receive] msg id cur: 5 rep: 1 --mismath ID
+[receive] msg id cur: 6 rep: 1 --mismath ID
+[receive] msg id cur: 2 rep: 1 --mismath ID
+[receive] msg id cur: 7 rep: 1 --mismath ID
+[send]msg id: 2 lcm_publish 3 iter
+[receive] msg id cur: 1 rep: 0 --mismath ID
+[receive] msg id cur: 0 rep: 0 --success
+[receive] msg id cur: 3 rep: 0 --mismath ID
+[receive] msg id cur: 4 rep: 0 --mismath ID
+[receive] msg id cur: 5 rep: 0 --mismath ID
+[receive] msg id cur: 6 rep: 0 --mismath ID
+[receive] msg id cur: 2 rep: 0 --mismath ID
+[receive] msg id cur: 7 rep: 0 --mismath ID
+[send]msg id: 2 lcm_publish 4 iter
+[receive] msg id cur: 1 rep: 0 --mismath ID
+[receive] msg id cur: 0 rep: 0 --success
+[receive] msg id cur: 3 rep: 0 --mismath ID
+[receive] msg id cur: 4 rep: 0 --mismath ID
+[receive] msg id cur: 5 rep: 0 --mismath ID
+[receive] msg id cur: 6 rep: 0 --mismath ID
+[receive] msg id cur: 2 rep: 0 --mismath ID
+[receive] msg id cur: 7 rep: 0 --mismath ID
+[send]msg id: 2 lcm_publish 5 iter
+[receive] msg id cur: 1 rep: 0 --mismath ID
+[receive] msg id cur: 0 rep: 0 --success
+[receive] msg id cur: 3 rep: 0 --mismath ID
+[receive] msg id cur: 4 rep: 0 --mismath ID
+[receive] msg id cur: 5 rep: 0 --mismath ID
+[receive] msg id cur: 6 rep: 0 --mismath ID
+[receive] msg id cur: 2 rep: 0 --mismath ID
+[receive] msg id cur: 7 rep: 0 --mismath ID
+[send]msg id: 2 lcm_publish 6 iter
+[receive] msg id cur: 1 rep: 0 --mismath ID
+[receive] msg id cur: 0 rep: 0 --success
+[receive] msg id cur: 3 rep: 0 --mismath ID
+[receive] msg id cur: 4 rep: 0 --mismath ID
+[receive] msg id cur: 5 rep: 0 --mismath ID
+[receive] msg id cur: 6 rep: 0 --mismath ID
+[receive] msg id cur: 2 rep: 0 --mismath ID
+[receive] msg id cur: 7 rep: 0 --mismath ID
+[send]msg id: 2 lcm_publish 7 iter
+[receive] msg id cur: 1 rep: 0 --mismath ID
+[receive] msg id cur: 0 rep: 0 --success
+[receive] msg id cur: 3 rep: 0 --mismath ID
+[receive] msg id cur: 4 rep: 0 --mismath ID
+[receive] msg id cur: 5 rep: 0 --mismath ID
+[receive] msg id cur: 6 rep: 0 --mismath ID
+[receive] msg id cur: 2 rep: 0 --mismath ID
+[receive] msg id cur: 7 rep: 0 --mismath ID
+[send]msg id: 2 lcm_publish 8 iter
+[receive] msg id cur: 1 rep: 0 --mismath ID
+[receive] msg id cur: 0 rep: 0 --success
+[receive] msg id cur: 3 rep: 0 --mismath ID
+[receive] msg id cur: 4 rep: 0 --mismath ID
+[receive] msg id cur: 5 rep: 0 --mismath ID
+[receive] msg id cur: 6 rep: 0 --mismath ID
+[receive] msg id cur: 2 rep: 0 --mismath ID
+[receive] msg id cur: 7 rep: 0 --mismath ID
+[send]msg id: 2 lcm_publish 9 iter
+[receive] msg id cur: 1 rep: 2 --mismath ID
+[receive] msg id cur: 0 rep: 2 --mismath ID
+[receive] msg id cur: 3 rep: 2 --mismath ID
+[receive] msg id cur: 4 rep: 2 --mismath ID
+[receive] msg id cur: 5 rep: 2 --mismath ID
+[receive] msg id cur: 6 rep: 2 --mismath ID
+[receive] msg id cur: 2 rep: 2 --success
+[receive] msg id cur: 7 rep: 2 --mismath ID
+[receive] msg id cur: 1 rep: 2 --mismath ID
+[receive] msg id cur: 0 rep: 2 --mismath ID
+[receive] msg id cur: 3 rep: 2 --mismath ID
+[receive] msg id cur: 4 rep: 2 --mismath ID
+[receive] msg id cur: 5 rep: 2 --mismath ID
+[receive] msg id cur: 6 rep: 2 --mismath ID
+[receive] msg id cur: 2 rep: 2 --success
+[receive] msg id cur: 7 rep: 2 --mismath ID
+[send]msg id: 5 lcm_publish 1 iter
+[receive] msg id cur: 1 rep: 2 --mismath ID
+[receive] msg id cur: 0 rep: 2 --mismath ID
+[receive] msg id cur: 3 rep: 2 --mismath ID
+[receive] msg id cur: 4 rep: 2 --mismath ID
+[receive] msg id cur: 5 rep: 2 --mismath ID
+[receive] msg id cur: 6 rep: 2 --mismath ID
+[receive] msg id cur: 2 rep: 2 --success
+[receive] msg id cur: 7 rep: 2 --mismath ID
+[send]msg id: 5 lcm_publish 2 iter
+[receive] msg id cur: 1 rep: 2 --mismath ID
+[receive] msg id cur: 0 rep: 2 --mismath ID
+[receive] msg id cur: 3 rep: 2 --mismath ID
+[receive] msg id cur: 4 rep: 2 --mismath ID
+[receive] msg id cur: 5 rep: 2 --mismath ID
+[receive] msg id cur: 6 rep: 2 --mismath ID
+[receive] msg id cur: 2 rep: 2 --success
+[receive] msg id cur: 7 rep: 2 --mismath ID
+[send]msg id: 5 lcm_publish 3 iter
+[send]msg id: 3 lcm_publish 3 iter
+[receive] msg id cur: 1 rep: 2 --mismath ID
+[receive] msg id cur: 0 rep: 2 --mismath ID
+[receive] msg id cur: 3 rep: 2 --mismath ID
+[receive] msg id cur: 4 rep: 2 --mismath ID
+[receive] msg id cur: 5 rep: 2 --mismath ID
+[receive] msg id cur: 6 rep: 2 --mismath ID
+[receive] msg id cur: 2 rep: 2 --success
+[receive] msg id cur: 7 rep: 2 --mismath ID
+[send]msg id: 5 lcm_publish 4 iter
+[receive] msg id cur: 1 rep: 2 --mismath ID
+[receive] msg id cur: 0 rep: 2 --mismath ID
+[receive] msg id cur: 3 rep: 2 --mismath ID
+[receive] msg id cur: 4 rep: 2 --mismath ID
+[receive] msg id cur: 5 rep: 2 --mismath ID
+[receive] msg id cur: 6 rep: 2 --mismath ID
+[receive] msg id cur: 2 rep: 2 --success
+[receive] msg id cur: 7 rep: 2 --mismath ID
+[receive] msg id cur: 1 rep: 2 --mismath ID
+[receive] msg id cur: 0 rep: 2 --mismath ID
+[receive] msg id cur: 3 rep: 2 --mismath ID
+[receive] msg id cur: 4 rep: 2 --mismath ID
+[receive] msg id cur: 5 rep: 2 --mismath ID
+[receive] msg id cur: 6 rep: 2 --mismath ID
+[receive] msg id cur: 2 rep: 2 --success
+[receive] msg id cur: 7 rep: 2 --mismath ID
+[send]msg id: 3 lcm_publish 4 iter
+[receive] msg id cur: 1 rep: 2 --mismath ID
+[receive] msg id cur: 0 rep: 2 --mismath ID
+[receive] msg id cur: 3 rep: 2 --mismath ID
+[receive] msg id cur: 4 rep: 2 --mismath ID
+[receive] msg id cur: 5 rep: 2 --mismath ID
+[receive] msg id cur: 6 rep: 2 --mismath ID
+[receive] msg id cur: 2 rep: 2 --success
+[receive] msg id cur: 7 rep: 2 --mismath ID
+[send]msg id: 1 lcm_publish 3 iter
+[send]msg id: 3 lcm_publish 5 iter
+[receive] msg id cur: 1 rep: 5 --mismath ID
+[receive] msg id cur: 0 rep: 5 --mismath ID
+[receive] msg id cur: 3 rep: 5 --mismath ID
+[receive] msg id cur: 4 rep: 5 --mismath ID
+[receive] msg id cur: 5 rep: 5 --success
+[receive] msg id cur: 6 rep: 5 --mismath ID
+[receive] msg id cur: 2 rep: 5 --mismath ID
+[receive] msg id cur: 7 rep: 5 --mismath ID
+[send]msg id: 0 lcm_publish 8 iter
+[receive] msg id cur: 1 rep: 3 --mismath ID
+[receive] msg id cur: 0 rep: 3 --mismath ID
+[receive] msg id cur: 3 rep: 3 --success
+[receive] msg id cur: 4 rep: 3 --mismath ID
+[receive] msg id cur: 5 rep: 3 --mismath ID
+[receive] msg id cur: 6 rep: 3 --mismath ID
+[receive] msg id cur: 2 rep: 3 --mismath ID
+[receive] msg id cur: 7 rep: 3 --mismath ID
+[send]msg id: 4 lcm_publish 1 iter
+[receive] msg id cur: 1 rep: 5 --mismath ID
+[receive] msg id cur: 0 rep: 5 --mismath ID
+[receive] msg id cur: 3 rep: 5 --mismath ID
+[receive] msg id cur: 4 rep: 5 --mismath ID
+[receive] msg id cur: 5 rep: 5 --success
+[receive] msg id cur: 6 rep: 5 --mismath ID
+[receive] msg id cur: 2 rep: 5 --mismath ID
+[receive] msg id cur: 7 rep: 5 --mismath ID
+[send]msg id: 4 lcm_publish 2 iter
+[receive] msg id cur: 1 rep: 5 --mismath ID
+[receive] msg id cur: 0 rep: 5 --mismath ID
+[receive] msg id cur: 3 rep: 5 --mismath ID
+[receive] msg id cur: 4 rep: 5 --mismath ID
+[receive] msg id cur: 5 rep: 5 --success
+[receive] msg id cur: 6 rep: 5 --mismath ID
+[receive] msg id cur: 2 rep: 5 --mismath ID
+[receive] msg id cur: 7 rep: 5 --mismath ID
+[send]msg id: 4 lcm_publish 3 iter
+[receive] msg id cur: 1 rep: 5 --mismath ID
+[receive] msg id cur: 0 rep: 5 --mismath ID
+[receive] msg id cur: 3 rep: 5 --mismath ID
+[receive] msg id cur: 4 rep: 5 --mismath ID
+[receive] msg id cur: 5 rep: 5 --success
+[receive] msg id cur: 6 rep: 5 --mismath ID
+[receive] msg id cur: 2 rep: 5 --mismath ID
+[receive] msg id cur: 7 rep: 5 --mismath ID
+[send]msg id: 4 lcm_publish 4 iter
+[receive] msg id cur: 1 rep: 3 --mismath ID
+[receive] msg id cur: 0 rep: 3 --mismath ID
+[receive] msg id cur: 3 rep: 3 --success
+[receive] msg id cur: 4 rep: 3 --mismath ID
+[receive] msg id cur: 5 rep: 3 --mismath ID
+[receive] msg id cur: 6 rep: 3 --mismath ID
+[receive] msg id cur: 2 rep: 3 --mismath ID
+[receive] msg id cur: 7 rep: 3 --mismath ID
+[send]msg id: 4 lcm_publish 5 iter
+[receive] msg id cur: 1 rep: 1 --success
+[receive] msg id cur: 0 rep: 1 --mismath ID
+[receive] msg id cur: 3 rep: 1 --mismath ID
+[receive] msg id cur: 4 rep: 1 --mismath ID
+[receive] msg id cur: 5 rep: 1 --mismath ID
+[receive] msg id cur: 6 rep: 1 --mismath ID
+[receive] msg id cur: 2 rep: 1 --mismath ID
+[receive] msg id cur: 7 rep: 1 --mismath ID
+[send]msg id: 4 lcm_publish 6 iter
+[receive] msg id cur: 1 rep: 3 --mismath ID
+[receive] msg id cur: 0 rep: 3 --mismath ID
+[receive] msg id cur: 3 rep: 3 --success
+[receive] msg id cur: 4 rep: 3 --mismath ID
+[receive] msg id cur: 5 rep: 3 --mismath ID
+[receive] msg id cur: 6 rep: 3 --mismath ID
+[receive] msg id cur: 2 rep: 3 --mismath ID
+[receive] msg id cur: 7 rep: 3 --mismath ID
+[send]msg id: 4 lcm_publish 7 iter
+[receive] msg id cur: 1 rep: 0 --mismath ID
+[receive] msg id cur: 0 rep: 0 --success
+[receive] msg id cur: 3 rep: 0 --mismath ID
+[receive] msg id cur: 4 rep: 0 --mismath ID
+[receive] msg id cur: 5 rep: 0 --mismath ID
+[receive] msg id cur: 6 rep: 0 --mismath ID
+[receive] msg id cur: 2 rep: 0 --mismath ID
+[receive] msg id cur: 7 rep: 0 --mismath ID
+[send]msg id: 4 lcm_publish 8 iter
+[receive] msg id cur: 1 rep: 4 --mismath ID
+[receive] msg id cur: 0 rep: 4 --mismath ID
+[receive] msg id cur: 3 rep: 4 --mismath ID
+[receive] msg id cur: 4 rep: 4 --success
+[receive] msg id cur: 5 rep: 4 --mismath ID
+[receive] msg id cur: 6 rep: 4 --mismath ID
+[receive] msg id cur: 2 rep: 4 --mismath ID
+[receive] msg id cur: 7 rep: 4 --mismath ID
+[receive] msg id cur: 1 rep: 4 --mismath ID
+[receive] msg id cur: 0 rep: 4 --mismath ID
+[receive] msg id cur: 3 rep: 4 --mismath ID
+[receive] msg id cur: 4 rep: 4 --success
+[receive] msg id cur: 5 rep: 4 --mismath ID
+[receive] msg id cur: 6 rep: 4 --mismath ID
+[receive] msg id cur: 2 rep: 4 --mismath ID
+[receive] msg id cur: 7 rep: 4 --mismath ID
+[receive] msg id cur: 1 rep: 4 --mismath ID
+[receive] msg id cur: 0 rep: 4 --mismath ID
+[receive] msg id cur: 3 rep: 4 --mismath ID
+[receive] msg id cur: 4 rep: 4 --success
+[receive] msg id cur: 5 rep: 4 --mismath ID
+[receive] msg id cur: 6 rep: 4 --mismath ID
+[receive] msg id cur: 7 rep: 4 --mismath ID
+[receive] msg id cur: 1 rep: 4 --mismath ID
+[receive] msg id cur: 0 rep: 4 --mismath ID
+[receive] msg id cur: 3 rep: 4 --mismath ID
+[receive] msg id cur: 4 rep: 4 --success
+[receive] msg id cur: 5 rep: 4 --mismath ID
+[receive] msg id cur: 6 rep: 4 --mismath ID
+[receive] msg id cur: 7 rep: 4 --mismath ID
+[receive] msg id cur: 1 rep: 4 --mismath ID
+[receive] msg id cur: 0 rep: 4 --mismath ID
+[receive] msg id cur: 3 rep: 4 --mismath ID
+[receive] msg id cur: 4 rep: 4 --success
+[receive] msg id cur: 5 rep: 4 --mismath ID
+[receive] msg id cur: 6 rep: 4 --mismath ID
+[receive] msg id cur: 7 rep: 4 --mismath ID
+[send]msg id: 1 lcm_publish 4 iter
+[receive] msg id cur: 1 rep: 4 --mismath ID
+[receive] msg id cur: 0 rep: 4 --mismath ID
+[receive] msg id cur: 3 rep: 4 --mismath ID
+[receive] msg id cur: 4 rep: 4 --success
+[receive] msg id cur: 5 rep: 4 --mismath ID
+[receive] msg id cur: 6 rep: 4 --mismath ID
+[receive] msg id cur: 7 rep: 4 --mismath ID
+[send]msg id: 1 lcm_publish 5 iter
+[receive] msg id cur: 1 rep: 4 --mismath ID
+[receive] msg id cur: 0 rep: 4 --mismath ID
+[receive] msg id cur: 3 rep: 4 --mismath ID
+[receive] msg id cur: 4 rep: 4 --success
+[receive] msg id cur: 5 rep: 4 --mismath ID
+[receive] msg id cur: 6 rep: 4 --mismath ID
+[receive] msg id cur: 7 rep: 4 --mismath ID
+[send]msg id: 1 lcm_publish 6 iter
+[receive] msg id cur: 1 rep: 4 --mismath ID
+[receive] msg id cur: 0 rep: 4 --mismath ID
+[receive] msg id cur: 3 rep: 4 --mismath ID
+[receive] msg id cur: 4 rep: 4 --success
+[receive] msg id cur: 5 rep: 4 --mismath ID
+[receive] msg id cur: 6 rep: 4 --mismath ID
+[receive] msg id cur: 7 rep: 4 --mismath ID
+[receive] msg id cur: 1 rep: 1 --success
+[receive] msg id cur: 0 rep: 1 --mismath ID
+[receive] msg id cur: 3 rep: 1 --mismath ID
+[receive] msg id cur: 4 rep: 1 --mismath ID
+[receive] msg id cur: 5 rep: 1 --mismath ID
+[receive] msg id cur: 6 rep: 1 --mismath ID
+[receive] msg id cur: 7 rep: 1 --mismath ID
+[send]msg id: 7 lcm_publish 1 iter
+[receive] msg id cur: 1 rep: 1 --success
+[receive] msg id cur: 0 rep: 1 --mismath ID
+[receive] msg id cur: 3 rep: 1 --mismath ID
+[receive] msg id cur: 4 rep: 1 --mismath ID
+[receive] msg id cur: 5 rep: 1 --mismath ID
+[receive] msg id cur: 6 rep: 1 --mismath ID
+[receive] msg id cur: 7 rep: 1 --mismath ID
+[send]msg id: 7 lcm_publish 2 iter
+[receive] msg id cur: 1 rep: 1 --success
+[receive] msg id cur: 0 rep: 1 --mismath ID
+[receive] msg id cur: 3 rep: 1 --mismath ID
+[receive] msg id cur: 4 rep: 1 --mismath ID
+[receive] msg id cur: 5 rep: 1 --mismath ID
+[receive] msg id cur: 6 rep: 1 --mismath ID
+[receive] msg id cur: 7 rep: 1 --mismath ID
+[receive] msg id cur: 1 rep: 7 --mismath ID
+[receive] msg id cur: 0 rep: 7 --mismath ID
+[receive] msg id cur: 3 rep: 7 --mismath ID
+[receive] msg id cur: 4 rep: 7 --mismath ID
+[receive] msg id cur: 5 rep: 7 --mismath ID
+[receive] msg id cur: 6 rep: 7 --mismath ID
+[receive] msg id cur: 7 rep: 7 --success
+[send]msg id: 6 lcm_publish 1 iter
+[send]msg id: 5 lcm_publish 5 iter
+[receive] msg id cur: 1 rep: 7 --mismath ID
+[receive] msg id cur: 0 rep: 7 --mismath ID
+[receive] msg id cur: 3 rep: 7 --mismath ID
+[receive] msg id cur: 4 rep: 7 --mismath ID
+[receive] msg id cur: 5 rep: 7 --mismath ID
+[receive] msg id cur: 6 rep: 7 --mismath ID
+[receive] msg id cur: 7 rep: 7 --success
+[send]msg id: 7 lcm_publish 3 iter
+[send]msg id: 4 lcm_publish 9 iter
+[receive] msg id cur: 1 rep: 6 --mismath ID
+[receive] msg id cur: 0 rep: 6 --mismath ID
+[receive] msg id cur: 3 rep: 6 --mismath ID
+[receive] msg id cur: 4 rep: 6 --mismath ID
+[receive] msg id cur: 5 rep: 6 --mismath ID
+[receive] msg id cur: 6 rep: 6 --success
+[receive] msg id cur: 7 rep: 6 --mismath ID
+[receive] msg id cur: 1 rep: 5 --mismath ID
+[receive] msg id cur: 0 rep: 5 --mismath ID
+[receive] msg id cur: 3 rep: 5 --mismath ID
+[receive] msg id cur: 7 rep: 5 --mismath ID
+[receive] msg id cur: 5 rep: 5 --success
+[receive] msg id cur: 6 rep: 5 --mismath ID
+[send]msg id: 6 lcm_publish 2 iter
+[receive] msg id cur: 1 rep: 7 --mismath ID
+[receive] msg id cur: 0 rep: 7 --mismath ID
+[receive] msg id cur: 3 rep: 7 --mismath ID
+[receive] msg id cur: 7 rep: 7 --success
+[receive] msg id cur: 5 rep: 7 --mismath ID
+[receive] msg id cur: 6 rep: 7 --mismath ID
+[send]msg id: 6 lcm_publish 3 iter
+[send]msg id: 1 lcm_publish 7 iter
+[send]msg id: 3 lcm_publish 6 iter
+[send]msg id: 0 lcm_publish 9 iter
+[receive] msg id cur: 1 rep: 4 --mismath ID
+[receive] msg id cur: 0 rep: 4 --mismath ID
+[receive] msg id cur: 3 rep: 4 --mismath ID
+[receive] msg id cur: 7 rep: 4 --mismath ID
+[receive] msg id cur: 5 rep: 4 --mismath ID
+[receive] msg id cur: 6 rep: 4 --mismath ID
+[receive] msg id cur: 1 rep: 6 --mismath ID
+[receive] msg id cur: 6 rep: 6 --success
+[receive] msg id cur: 3 rep: 6 --mismath ID
+[receive] msg id cur: 7 rep: 6 --mismath ID
+[receive] msg id cur: 5 rep: 6 --mismath ID
+[send]msg id: 3 lcm_publish 7 iter
+[receive] msg id cur: 1 rep: 6 --mismath ID
+[receive] msg id cur: 6 rep: 6 --success
+[receive] msg id cur: 3 rep: 6 --mismath ID
+[receive] msg id cur: 7 rep: 6 --mismath ID
+[receive] msg id cur: 5 rep: 6 --mismath ID
+[send]msg id: 3 lcm_publish 8 iter
+[receive] msg id cur: 1 rep: 1 --success
+[receive] msg id cur: 6 rep: 1 --mismath ID
+[receive] msg id cur: 3 rep: 1 --mismath ID
+[receive] msg id cur: 7 rep: 1 --mismath ID
+[receive] msg id cur: 5 rep: 1 --mismath ID
+[receive] msg id cur: 1 rep: 3 --mismath ID
+[receive] msg id cur: 6 rep: 3 --mismath ID
+[receive] msg id cur: 3 rep: 3 --success
+[receive] msg id cur: 7 rep: 3 --mismath ID
+[receive] msg id cur: 5 rep: 3 --mismath ID
+[send]msg id: 5 lcm_publish 6 iter
+[receive] msg id cur: 1 rep: 0 --mismath ID
+[receive] msg id cur: 6 rep: 0 --mismath ID
+[receive] msg id cur: 3 rep: 0 --mismath ID
+[receive] msg id cur: 7 rep: 0 --mismath ID
+[receive] msg id cur: 5 rep: 0 --mismath ID
+[send]msg id: 7 lcm_publish 4 iter
+[send]msg id: 3 lcm_publish 9 iter
+[receive] msg id cur: 1 rep: 3 --mismath ID
+[receive] msg id cur: 6 rep: 3 --mismath ID
+[receive] msg id cur: 3 rep: 3 --success
+[receive] msg id cur: 7 rep: 3 --mismath ID
+[receive] msg id cur: 5 rep: 3 --mismath ID
+[receive] msg id cur: 1 rep: 3 --mismath ID
+[receive] msg id cur: 6 rep: 3 --mismath ID
+[receive] msg id cur: 3 rep: 3 --success
+[receive] msg id cur: 7 rep: 3 --mismath ID
+[receive] msg id cur: 5 rep: 3 --mismath ID
+[send]msg id: 6 lcm_publish 4 iter
+[receive] msg id cur: 1 rep: 5 --mismath ID
+[receive] msg id cur: 6 rep: 5 --mismath ID
+[receive] msg id cur: 5 rep: 5 --success
+[receive] msg id cur: 7 rep: 5 --mismath ID
+[send]msg id: 5 lcm_publish 7 iter
+[receive] msg id cur: 1 rep: 7 --mismath ID
+[receive] msg id cur: 6 rep: 7 --mismath ID
+[receive] msg id cur: 5 rep: 7 --mismath ID
+[receive] msg id cur: 7 rep: 7 --success
+[send]msg id: 5 lcm_publish 8 iter
+[receive] msg id cur: 1 rep: 3 --mismath ID
+[receive] msg id cur: 6 rep: 3 --mismath ID
+[receive] msg id cur: 5 rep: 3 --mismath ID
+[receive] msg id cur: 7 rep: 3 --mismath ID
+[send]msg id: 5 lcm_publish 9 iter
+[receive] msg id cur: 1 rep: 6 --mismath ID
+[receive] msg id cur: 6 rep: 6 --success
+[receive] msg id cur: 5 rep: 6 --mismath ID
+[receive] msg id cur: 7 rep: 6 --mismath ID
+[send]msg id: 6 lcm_publish 5 iter
+[receive] msg id cur: 1 rep: 5 --mismath ID
+[receive] msg id cur: 6 rep: 5 --mismath ID
+[receive] msg id cur: 5 rep: 5 --success
+[receive] msg id cur: 7 rep: 5 --mismath ID
+[receive] msg id cur: 1 rep: 5 --mismath ID
+[receive] msg id cur: 6 rep: 5 --mismath ID
+[receive] msg id cur: 5 rep: 5 --success
+[receive] msg id cur: 7 rep: 5 --mismath ID
+[receive] msg id cur: 1 rep: 5 --mismath ID
+[receive] msg id cur: 6 rep: 5 --mismath ID
+[receive] msg id cur: 7 rep: 5 --mismath ID
+[receive] msg id cur: 1 rep: 6 --mismath ID
+[receive] msg id cur: 6 rep: 6 --success
+[receive] msg id cur: 7 rep: 6 --mismath ID
+[send]msg id: 7 lcm_publish 5 iter
+[receive] msg id cur: 1 rep: 7 --mismath ID
+[receive] msg id cur: 6 rep: 7 --mismath ID
+[receive] msg id cur: 7 rep: 7 --success
+[send]msg id: 6 lcm_publish 6 iter
+[send]msg id: 1 lcm_publish 8 iter
+[send]msg id: 7 lcm_publish 6 iter
+[receive] msg id cur: 1 rep: 6 --mismath ID
+[receive] msg id cur: 6 rep: 6 --success
+[receive] msg id cur: 7 rep: 6 --mismath ID
+[receive] msg id cur: 1 rep: 1 --success
+[receive] msg id cur: 6 rep: 1 --mismath ID
+[receive] msg id cur: 7 rep: 1 --mismath ID
+[send]msg id: 6 lcm_publish 7 iter
+[send]msg id: 7 lcm_publish 7 iter
+[receive] msg id cur: 1 rep: 7 --mismath ID
+[receive] msg id cur: 6 rep: 7 --mismath ID
+[receive] msg id cur: 7 rep: 7 --success
+[send]msg id: 7 lcm_publish 8 iter
+[receive] msg id cur: 1 rep: 6 --mismath ID
+[receive] msg id cur: 6 rep: 6 --success
+[receive] msg id cur: 7 rep: 6 --mismath ID
+[send]msg id: 7 lcm_publish 9 iter
+[receive] msg id cur: 1 rep: 7 --mismath ID
+[receive] msg id cur: 6 rep: 7 --mismath ID
+[receive] msg id cur: 7 rep: 7 --success
+[receive] msg id cur: 1 rep: 7 --mismath ID
+[receive] msg id cur: 6 rep: 7 --mismath ID
+[send]msg id: 6 lcm_publish 8 iter
+[receive] msg id cur: 1 rep: 7 --mismath ID
+[receive] msg id cur: 6 rep: 7 --mismath ID
+[send]msg id: 6 lcm_publish 9 iter
+[receive] msg id cur: 1 rep: 6 --mismath ID
+[receive] msg id cur: 6 rep: 6 --success
+[receive] msg id cur: 1 rep: 6 --mismath ID
+[receive] msg id cur: 6 rep: 6 --success
+[send]msg id: 1 lcm_publish 9 iter
+[receive] msg id cur: 1 rep: 1 --success
+[       OK ] LCM_C.MultiThreadLCM (9 ms)
+[----------] 2 tests from LCM_C (9 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test case ran. (10 ms total)
+[  PASSED  ] 2 tests.
