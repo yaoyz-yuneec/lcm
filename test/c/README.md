@@ -1,4 +1,4 @@
-MultiThread usage on the LCM
+MultiThread test on the LCM
 
 # Compile
 
