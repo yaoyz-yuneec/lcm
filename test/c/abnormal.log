@@ -1,0 +1,23 @@
+[send]msg id: 3 lcm_publish 506739 iter
+[receive] msg id cur: 0 rep: 7 --mismath ID
+[receive] msg id cur: 1 rep: 7 --mismath ID
+[receive] msg id cur: 6 rep: 7 --mismath ID
+[receive] msg id cur: 3 rep: 7 --mismath ID
+[receive] msg id cur: 5 rep: 7 --mismath ID
+[receive] msg id cur: 7 rep: 7 --success
+[receive] msg id cur: 2 rep: 7 --mismath ID
+[receive] msg id cur: 4 rep: 7 --mismath ID
+[send]msg id: 7 lcm_publish 503669 iter
+[receive] msg id cur: 0 rep: 3 --mismath ID
+[receive] msg id cur: 1 rep: 3 --mismath ID
+[receive] msg id cur: 6 rep: 3 --mismath ID
+[receive] msg id cur: 3 rep: 3 --success
+[receive] msg id cur: 5 rep: 3 --mismath ID
+[receive] msg id cur: 7 rep: 3 --mismath ID
+[receive] msg id cur: 2 rep: 3 --mismath ID
+[receive] msg id cur: 4 rep: 3 --mismath ID
+[send]msg id: 7 lcm_publish 503670 iter
+/home/yaoyz-windows/work/lcm/test/c/lcm_multi_thread.cpp:90: Failure
+Expected: (lcm_handle_timeout(g_lcm, 500)) > (0), actual: 0 vs 0
+
+
