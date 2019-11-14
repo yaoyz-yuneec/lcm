@@ -6,6 +6,9 @@ target_link_libraries(test-c-server lcm-test-types-c lcm)
 add_executable(test-c-client client.cpp common.c)
 target_link_libraries(test-c-client ${test_c_libs})
 
+add_executable(test-c-multi-thread pthread_pool.cpp lcm_multi_thread.cpp common.c)
+target_link_libraries(test-c-multi-thread ${test_c_libs})
+
 add_executable(test-c-memq_test memq_test.cpp common.c)
 target_link_libraries(test-c-memq_test ${test_c_libs})
 
