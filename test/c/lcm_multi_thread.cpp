@@ -77,7 +77,7 @@ void lcm_publish_func(void *arg)
     g_echo_response_count[p->msg_id] = 0;
 
     int iter;
-    for (iter = 0; iter < 8; iter++) {
+    for (iter = 0; iter < 500; iter++) {
 
         //int j;
         //for(j = 0; j < g_msg_data_len; j++){
