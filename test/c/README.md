@@ -1,9 +1,11 @@
-MultiThread test on the LCM
+MultiThread test for the LCM
 
 # Compile
 
 Under the lcm root dir:
+    
     cmake CMakeLists.txt
+    
     make
 
 # Debug
@@ -13,7 +15,9 @@ Under the lcm root dir:
 Under the lcm/test/c dir:
 
 In one console:
+    
     ./test-c-server
     
 In another console:
+    
     ./test-c-multi-thread

@@ -21,4 +21,5 @@
 Expected: (lcm_handle_timeout(g_lcm, 500)) > (0), actual: 0 vs 0
 
 
-Sorry the above case happen when I kill the server process, I think it's still OK
+Sorry for the log, this exception is caused by stopping the server program.
+Later verification is OK.
