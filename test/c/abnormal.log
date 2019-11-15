@@ -21,3 +21,5 @@
 Expected: (lcm_handle_timeout(g_lcm, 500)) > (0), actual: 0 vs 0
 
 
+Sorry for the log, this exception is caused by stopping the server program.
+Later verification is OK.
