@@ -73,11 +73,19 @@ void lcm_publish_func(void *arg)
 {
 
     md_lcm_msg_t *p = (md_lcm_msg_t *)arg;
-    lcm_subscription_t *subs = lcm_subscribe(g_lcm, "TEST_ECHO_REPLY", echo_handler, arg);
-    g_echo_response_count[p->msg_id] = 0;
 
+    // eg. When the 5th thread subscribe, the response of the 2th thread come, then the 5th
+    // thread will recive the
+    //lcm_subscription_t *subs = lcm_subscribe(g_lcm, "TEST_ECHO_REPLY", echo_handler, arg);
+    //g_echo_response_count[p->msg_id] = 0;
+
+    g_echo_response_count[p->msg_id] = 0;
+    lcm_subscription_t *subs = lcm_subscribe(g_lcm, "TEST_ECHO_REPLY", echo_handler, arg);
+
+    // Wait all the thread register.
+    usleep(2000000);
     int iter;
-    for (iter = 0; iter < 500; iter++) {
+    for (iter = 0; iter < 1000; iter++) {
 
         //int j;
         //for(j = 0; j < g_msg_data_len; j++){
@@ -88,6 +96,19 @@ void lcm_publish_func(void *arg)
 
         printf("[send]msg id: %d lcm_publish %d iter\n", p->msg_id, iter);
         ASSERT_GT(lcm_handle_timeout(g_lcm, 500), 0);
+        while(g_echo_response_count[p->msg_id] != iter+1){
+            printf("[Waiting...]It's not my response(msg-id: %d), my response num is %d now, I need wait it to %d\n",
+                    p->msg_id, g_echo_response_count[p->msg_id], iter+1);
+            //usleep(2000000);
+            usleep(10);
+        }
+        printf("[OK]My response(msg-id: %d), my response num is %d now, And the loop iter is %d\n",
+                p->msg_id, g_echo_response_count[p->msg_id], iter+1);
+
+
+        // When use multi thread, the threads share the same lcm channel, so the lcm_fd of xxx_thread
+        // is often waken up by the response of the other threads.
+        // And the lcm_handle_timeout is often return by the response of the other thread.
         //ASSERT_EQ(g_echo_response_count[p->msg_id], iter + 1);
         //printf("[send-after-success]msg id: %d lcm_publish %d iter\n", p->msg_id, iter);
 
@@ -97,8 +118,9 @@ void lcm_publish_func(void *arg)
             //return;
         //}
     }
-
-    lcm_unsubscribe(g_lcm, subs);
+    // When one thread unsubscribe, There will be unpredictable behavior on the other thread which use the same channel:
+    // eg. the CB on the threads will called repeatly.
+    //lcm_unsubscribe(g_lcm, subs);
     return;
 }
 
