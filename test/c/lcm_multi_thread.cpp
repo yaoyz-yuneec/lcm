@@ -23,7 +23,8 @@ static lcm_t *g_lcm = NULL;
 // ================================= echo test
 const int pthread_num = 10;
 const int g_msg_data_len = 512;
-int g_echo_response_count[pthread_num] = {0};
+//static volatile int g_echo_response_count[pthread_num] = {0};
+static int g_echo_response_count[pthread_num] = {0};
 
 
 typedef struct md_lcm_msg{
@@ -64,9 +65,11 @@ static void echo_handler(const lcm_recv_buf_t *rbuf, const char *channel, void *
                 p->msg_id, p2->msg_id);
         return;
     }
-    printf("[receive] msg id cur: %d rep: %d --success\n",
-            p->msg_id, p2->msg_id);
+    printf("[0-OK][receive] msg id cur: %d rep: %d --success, pre response num: %d\n",
+            p->msg_id, p2->msg_id, g_echo_response_count[p->msg_id]);
     g_echo_response_count[p->msg_id]++;
+    //printf("[1-OK][receive] msg id: %d update response num to: %d\n",
+            //p->msg_id, g_echo_response_count[p->msg_id]);
 }
 
 void lcm_publish_func(void *arg)
@@ -81,11 +84,12 @@ void lcm_publish_func(void *arg)
 
     g_echo_response_count[p->msg_id] = 0;
     lcm_subscription_t *subs = lcm_subscribe(g_lcm, "TEST_ECHO_REPLY", echo_handler, arg);
+    //lcm_subscription_t *subs22 = lcm_subscribe(g_lcm, "TEST_ECHO_REPLY", echo_handler, arg);
 
     // Wait all the thread register.
     usleep(2000000);
     int iter;
-    for (iter = 0; iter < 1000; iter++) {
+    for (iter = 0; iter < 10; iter++) {
 
         //int j;
         //for(j = 0; j < g_msg_data_len; j++){
@@ -99,10 +103,10 @@ void lcm_publish_func(void *arg)
         while(g_echo_response_count[p->msg_id] != iter+1){
             printf("[Waiting...]It's not my response(msg-id: %d), my response num is %d now, I need wait it to %d\n",
                     p->msg_id, g_echo_response_count[p->msg_id], iter+1);
-            //usleep(2000000);
+            //usleep(200000);
             usleep(10);
         }
-        printf("[OK]My response(msg-id: %d), my response num is %d now, And the loop iter is %d\n",
+        printf("[2-OK]It's my response(msg-id: %d), my response num is %d now, And the loop iter is %d\n",
                 p->msg_id, g_echo_response_count[p->msg_id], iter+1);
 
 
